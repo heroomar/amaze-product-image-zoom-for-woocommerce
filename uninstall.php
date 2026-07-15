@@ -2,7 +2,7 @@
 /**
  * Uninstall handler.
  *
- * @package Amaze_WooCommerce_Image_Zoom
+ * @package Amaze_Product_Image_Zoom_For_WooCommerce
  */
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;

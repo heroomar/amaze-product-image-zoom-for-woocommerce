@@ -1,4 +1,4 @@
-# amaze-prduct-image-magnifier
+# amaze-product-image-zoom-for-woocommerce
 Simple Image Magnifier for Wordpress e-commerce products images
 
 
