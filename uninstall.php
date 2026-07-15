@@ -1,15 +1,8 @@
 <?php
 /**
- * Uninstall plugin
+ * Uninstall handler.
  *
- * @author Your Inspiration Themes
- * @package YITH WooCommerce Product Gallery & Image Zoom
- * @version 1.1.2
+ * @package Amaze_WooCommerce_Image_Zoom
  */
 
-// If uninstall not called from WordPress exit
-if( !defined( 'WP_UNINSTALL_PLUGIN' ) )
-    { exit; }
-
-global $wpdb;
-
+defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
