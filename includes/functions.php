@@ -44,14 +44,14 @@ function amaze_wpim_enqueue_assets() {
 	}
 
 	wp_enqueue_style(
-		'amaze-woocommerce-image-zoom',
+		'amaze-product-image-zoom',
 		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_PLUGIN_URL . 'assets/css/style.css',
 		array(),
 		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_VERSION
 	);
 
 	wp_enqueue_script(
-		'amaze-woocommerce-image-zoom',
+		'amaze-product-image-zoom',
 		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_PLUGIN_URL . 'assets/js/script.js',
 		array(),
 		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_VERSION,

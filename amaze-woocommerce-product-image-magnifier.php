@@ -1,12 +1,11 @@
 <?php
 /**
- * Plugin Name: Amaze WooCommerce Image Zoom
+ * Plugin Name: Amaze Product Image Zoom For WooCommerce
  * Description: Adds a product image magnifier to WooCommerce product galleries.
  * Version: 1.0.0
  * Author: UmerZaki
  * Author URI: https://www.fiverr.com/umerzaki1
- * Text Domain: amaze-woocommerce-product-image-magnifier
- * Domain Path: /languages
+ * Text Domain: amaze-product-image-magnifier
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Requires Plugins: woocommerce
