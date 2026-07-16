@@ -1,4 +1,4 @@
-.amaze-wpim-magnifier {
+.pixora-wpim-magnifier {
 	background-color: #000;
 	background-repeat: no-repeat;
 	border: 0;
@@ -15,7 +15,7 @@
 	z-index: 20;
 }
 
-.amaze-wpim-magnifier.is-visible {
+.pixora-wpim-magnifier.is-visible {
 	display: block;
 }
 
@@ -29,22 +29,22 @@
 	cursor: none;
 }
 
-.amaze-wpim-magnifier--mobile {
+.pixora-wpim-magnifier--mobile {
 	display: none !important;
 }
 
 @media (max-width: 767px) {
-	.amaze-wpim-magnifier:not(.amaze-wpim-magnifier--mobile) {
+	.pixora-wpim-magnifier:not(.pixora-wpim-magnifier--mobile) {
 		display: none !important;
 	}
 
-	.amaze-wpim-magnifier--mobile {
+	.pixora-wpim-magnifier--mobile {
 		height: 150px;
 		margin: -75px 0 0 -75px !important;
 		width: 150px;
 	}
 
-	.amaze-wpim-magnifier--mobile.is-visible {
+	.pixora-wpim-magnifier--mobile.is-visible {
 		display: block !important;
 	}
 }

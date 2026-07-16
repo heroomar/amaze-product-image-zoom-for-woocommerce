@@ -1,5 +1,5 @@
-=== Amaze Product Image Zoom For WooCommerce ===
-Contributors: herosolutions
+=== Pixora Product Magnifier for WooCommerce ===
+Contributors: umarzaki
 Tags: woocommerce, image zoom, product image, magnifier
 Requires at least: 6.5
 Tested up to: 7.0
@@ -13,7 +13,7 @@ Add a lightweight product image magnifier to WooCommerce product galleries.
 
 == Description ==
 
-Amaze Product Image Zoom For WooCommerce adds a circular magnifier to WooCommerce product images. It works with classic WooCommerce product galleries and supports the modern WooCommerce Product Gallery block.
+Pixora Product Magnifier for WooCommerce adds a circular magnifier to WooCommerce product images. It works with classic WooCommerce product galleries and supports the modern WooCommerce Product Gallery block.
 
 The plugin is lightweight, does not add an admin settings page, and does not store personal data.
 

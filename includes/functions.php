@@ -2,7 +2,7 @@
 /**
  * Plugin functions.
  *
- * @package Amaze_Product_Image_Zoom_For_WooCommerce
+ * @package Pixora_Product_Magnifier_for_WooCommerce
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return bool
  */
-function amaze_wpim_is_woocommerce_available() {
+function pixora_wpim_is_woocommerce_available() {
 	return class_exists( 'WooCommerce' );
 }
 
@@ -24,44 +24,44 @@ function amaze_wpim_is_woocommerce_available() {
  *
  * @return void
  */
-function amaze_wpim_disable_woocommerce_zoom() {
-	if ( ! amaze_wpim_is_woocommerce_available() ) {
+function pixora_wpim_disable_woocommerce_zoom() {
+	if ( ! pixora_wpim_is_woocommerce_available() ) {
 		return;
 	}
 
 	remove_theme_support( 'wc-product-gallery-zoom' );
 }
-add_action( 'after_setup_theme', 'amaze_wpim_disable_woocommerce_zoom', 20 );
+add_action( 'after_setup_theme', 'pixora_wpim_disable_woocommerce_zoom', 20 );
 
 /**
  * Enqueue front-end assets on product pages.
  *
  * @return void
  */
-function amaze_wpim_enqueue_assets() {
-	if ( ! amaze_wpim_is_woocommerce_available() || ! function_exists( 'is_product' ) || ! is_product() ) {
+function pixora_wpim_enqueue_assets() {
+	if ( ! pixora_wpim_is_woocommerce_available() || ! function_exists( 'is_product' ) || ! is_product() ) {
 		return;
 	}
 
 	wp_enqueue_style(
-		'amaze-product-image-zoom',
-		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_PLUGIN_URL . 'assets/css/style.css',
+		'pixora-product-image-zoom',
+		PIXORA_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_PLUGIN_URL . 'assets/css/style.css',
 		array(),
-		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_VERSION
+		PIXORA_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_VERSION
 	);
 
 	wp_enqueue_script(
-		'amaze-product-image-zoom',
-		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_PLUGIN_URL . 'assets/js/script.js',
+		'pixora-product-image-zoom',
+		PIXORA_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_PLUGIN_URL . 'assets/js/script.js',
 		array(),
-		AMAZE_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_VERSION,
+		PIXORA_WOOCOMMERCE_PRODUCT_IMAGE_MAGNIFIER_VERSION,
 		array(
 			'in_footer' => true,
 			'strategy'   => 'defer',
 		)
 	);
 }
-add_action( 'wp_enqueue_scripts', 'amaze_wpim_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'pixora_wpim_enqueue_assets' );
 
 /**
  * Add the magnifier elements to classic WooCommerce gallery images.
@@ -70,8 +70,8 @@ add_action( 'wp_enqueue_scripts', 'amaze_wpim_enqueue_assets' );
  * @param int    $post_thumbnail_id Attachment ID.
  * @return string
  */
-function amaze_wpim_add_magnifier_to_gallery_image( $html, $post_thumbnail_id ) {
-	if ( ! amaze_wpim_is_woocommerce_available() || ! is_product() ) {
+function pixora_wpim_add_magnifier_to_gallery_image( $html, $post_thumbnail_id ) {
+	if ( ! pixora_wpim_is_woocommerce_available() || ! is_product() ) {
 		return $html;
 	}
 
@@ -87,7 +87,7 @@ function amaze_wpim_add_magnifier_to_gallery_image( $html, $post_thumbnail_id ) 
 	}
 
 	$magnifier = sprintf(
-		'<span class="amaze-wpim-magnifier" aria-hidden="true" data-width="%1$d" data-height="%2$d" style="background-image: url(%3$s);"></span><span class="amaze-wpim-magnifier amaze-wpim-magnifier--mobile" aria-hidden="true" data-width="%1$d" data-height="%2$d" style="background-image: url(%3$s);"></span>',
+		'<span class="pixora-wpim-magnifier" aria-hidden="true" data-width="%1$d" data-height="%2$d" style="background-image: url(%3$s);"></span><span class="pixora-wpim-magnifier pixora-wpim-magnifier--mobile" aria-hidden="true" data-width="%1$d" data-height="%2$d" style="background-image: url(%3$s);"></span>',
 		absint( $full_src[1] ),
 		absint( $full_src[2] ),
 		esc_url( $full_src[0] )
@@ -101,4 +101,4 @@ function amaze_wpim_add_magnifier_to_gallery_image( $html, $post_thumbnail_id ) 
 
 	return $updated_html;
 }
-add_filter( 'woocommerce_single_product_image_thumbnail_html', 'amaze_wpim_add_magnifier_to_gallery_image', 99, 2 );
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'pixora_wpim_add_magnifier_to_gallery_image', 99, 2 );

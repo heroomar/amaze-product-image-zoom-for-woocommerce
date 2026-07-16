@@ -6,8 +6,8 @@
 		'.wc-block-product-gallery-large-image__wrapper'
 	];
 
-	const MAGNIFIER_CLASS = 'amaze-wpim-magnifier';
-	const MOBILE_CLASS = 'amaze-wpim-magnifier--mobile';
+	const MAGNIFIER_CLASS = 'pixora-wpim-magnifier';
+	const MOBILE_CLASS = 'pixora-wpim-magnifier--mobile';
 
 	function isMobile() {
 		return window.matchMedia( '(max-width: 767px)' ).matches;
